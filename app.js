@@ -104,6 +104,9 @@ app.use("/", user);
 //     await sampleListing.save();
 //     res.send("Testing is successful and the new document is saved to the collection wanderlust");
 // });
+app.get("/",(req,res)=>{
+    res.redirect("./listing");
+)};
 
 app.all("*", (req, res, next) => {
     throw new ExpressError(404, "Page not found");
